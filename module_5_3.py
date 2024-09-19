@@ -19,6 +19,8 @@ class House:
     def __eq__(self, other):
         if isinstance(other, House):
             return self.number_of_floors == other.number_of_floors
+        elif isinstance(other, int):
+            return self.number_of_floors == other
 
 
 h1 = House('ЖК Эльбрус', 10)
